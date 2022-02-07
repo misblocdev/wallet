@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>아나파톡 WALLET - 펀딩</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,">
+	<script src="./js/jquery-3.5.1.min.js"></script>
+	<link rel="stylesheet" href="./css/default.css" media="all">
+
+	<script src="https://kit.fontawesome.com/db1ab7a33d.js" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+
+	<script>
+	var white_head = 0;
+	$(function(){
+		$('#header').load('header.html');
+		$('#footer').load('footer.html');
+	})
+	</script>
+</head>
+<body>
+
+<style>
+.funding_view  {padding: 26px 0 120px;}
+.funding_state {width: 45px;height: 21px;line-height: 21px;font-size: 10px;color: #4453e2;background: #e2e4fa;border-radius: 3px;text-align: center;font-weight: 500;margin-bottom: 2px;}
+.funding_view h1 {font-size: 19px;font-family: 'S-CoreDream-6Bold';padding-bottom: 12px;border-bottom: 1px solid #d6d6d6;margin-bottom: 10px;}
+.funding_rate {margin-bottom: 12px;}
+.funding_rate p {font-size: 13px;}
+.funding_rate strong {font-size: 18px;}
+.funding_info dt {float: left;clear: both;width: 28%;font-size: 13px;line-height: 18px;color: #aaaaaa;padding: 9px 0;}
+.funding_info dd {float: left;width: 72%;font-size: 13px;line-height: 18px;color: #000;padding: 9px 0;-ms-word-break: keep-all;word-break: keep-all;}
+.funding_info dd .pd_bar {float: left;width: 80%;height: 3px;background: #e2e4f9;position: relative;margin-top: 7px;}
+.funding_info dd .pd_bar:before {content: '0%';display: block;clear: both;position: absolute;left: 0;bottom: -24px;font-size: 13px;}
+.funding_info dd .pd_bar:after {content: '100%';display: block;clear: both;position: absolute;right: 0;bottom: -24px;font-size: 13px;}
+.funding_info dd .pd_bar_on {position: absolute;left: 0;top: 0;height: 3px;background: #4453e2;}
+.funding_info dd .pd_percent {float: left;width: 15%;font-size: 12px;line-height: 17px;color: #4453e2;margin-left: 5%;text-align: center;}
+.funding_info .funding_inquiry {margin-bottom: 18px;}
+.funding_info .funding_inquiry p {font-size: 13px;line-height: 18px;color: #aaaaaa;padding: 9px 0;}
+.funding_info .funding_inquiry textarea {height: 90px;width: 100%;border: 1px solid #c8c7c4;border-radius: 18px;resize: none;font-size: 13px;padding: 8px 10px;}
+.funding_info .funding_inquiry .inquiry_submit {-webkit-appearance: none;width: 100%;margin-top: 9px;height: 40px;font-size: 17px;color: #fff;border: none;background: #4453e2;border-radius: 5px;}
+.funding_info .funding_link {text-align: center;font-size: 0;}
+.funding_info .funding_link a {float: left;display: inline-block;width: 24%;margin: 0 0.5%;height: 50px;line-height: 1.2;padding-top: 5px;text-align: center;color: #fff;font-size: 17px;font-weight: bold;border-radius: 6px;background: #777;}
+.funding_info .funding_link a:nth-child(1) {padding-top: 14px;}
+.funding_info .funding_link a.down {background: #4453e2;}
+.funding_info .funding_btn {margin-top: 60px;text-align: center;font-size: 0;}
+.funding_info .funding_btn a {display: inline-block;height: 50px;line-height: 50px;text-align: center;color: #fff;font-size: 17px;font-weight: bold;border-radius: 6px;}
+.funding_info .funding_btn a.btn_apply {background: #4453e2;margin-right: 10px;width: 214px;}
+.funding_info .funding_btn a.btn_list {background: #777777;width: 92px;}
+</style>
+
+<!-- header { -->
+<div id="header"></div>
+<!-- } header -->
+
+<!-- container { -->
+<div id="container" class="pt60">
+	
+	<div class="funding_view">
+		<div class="inner">
+			<div class="funding_state">펀딩</div>
+			<h1>펀딩</h1>
+			
+			<!-- 펀딩 상세 { -->
+			<div class="sc01 funding_info spoqa">
+				<div class="funding_rate">
+					<p>펀딩참여율</p>
+					<strong>97%</strong>
+				</div>
+				<dl class="clearfix">
+					<dt>퍼블릿 세일</dt>
+					<dd class="pd_name">글로벌 주식과 코인에 스왑이 가능한 플랫폼</dd>
+					<dt>만기일</dt>
+					<dd class="pd_funding_period">2021.11.30</dd>
+					<dt>교환비율</dt>
+					<dd class="pd_ratio">1 ETH = 30,000 STA<br/>1 LSC = 1.5 STA</dd>
+					<dt>신청률</dt>
+					<dd class="pd_percent clearfix">
+						<div class="pd_bar">
+							<div class="pd_bar_on" style="width: 97%;"></div>
+						</div>
+						<div class="pd_percent">97.0%</div>						
+					</dd>
+				</dl>
+				<div class="funding_inquiry">
+					<p>문의하기</p>
+					<form action="" id="fundingInqForm">
+						<textarea name="funding_inquiry" id="fundingInquiry" cols="30" rows="10"></textarea>
+						<input type="submit" value="문의하기" class="inquiry_submit">
+					</form>
+				</div>
+				<div class="funding_link clearfix">
+					<a href="">홈페이지</a>
+					<a href="" class="down">백서<br/>다운로드</a>
+					<a href="">카카오톡<br/>공식방</a>
+					<a href="">텔레그램<br/>공식방</a>
+				</div>
+				<div class="funding_btn">
+					<a href="./funding_apply.html" class="btn_apply">펀딩하기</a>
+					<a href="./funding.html" class="btn_list">목록</a>
+				</div>
+			</div>
+			<!-- } 펀딩 상세 -->
+
+		</div>
+	</div>
+
+</div>
+<!-- } container -->
+
+<!-- footer { -->
+<div id="footer"></div>
+<!-- } footer -->
+
+<script>
+</script>
+</body>
+</html>

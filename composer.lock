@@ -1,0 +1,98 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "428bc51b525e2937eee5a50e6e1adceb",
+    "packages": [
+        {
+            "name": "block-chen/blocksdk-php",
+            "version": "v2.1.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Block-Chen/blocksdk-php.git",
+                "reference": "ac3d942cec9bcf49c34ebda1f7bf1871aae50fcd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Block-Chen/blocksdk-php/zipball/ac3d942cec9bcf49c34ebda1f7bf1871aae50fcd",
+                "reference": "ac3d942cec9bcf49c34ebda1f7bf1871aae50fcd",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "ext-openssl": "*",
+                "phpunit/phpunit": "^5.4.0",
+                "squizlabs/php_codesniffer": "^2.0.0"
+            },
+            "suggest": {
+                "ext-curl": "To send requests using cURL",
+                "ext-openssl": "Allows working with CloudFront private distributions and verifying received SNS messages"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BlockSDK\\": "src/"
+                },
+                "files": [
+                    "src/base.php",
+                    "src/blocksdk.php",
+                    "src/contractdb.php",
+                    "src/token.php",
+                    "src/tool.php",
+                    "src/webhook.php",
+                    "src/dash.php",
+                    "src/bitcoin.php",
+                    "src/bitcoincash.php",
+                    "src/ethereum.php",
+                    "src/litecoin.php",
+                    "src/polygon.php",
+                    "src/solc.php",
+                    "src/klaytn.php",
+                    "src/binancesmart.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "BlockChain SDK Service",
+                    "homepage": "https://blocksdk.com"
+                }
+            ],
+            "description": "Pure (no dependencies) implementation of blocksdk",
+            "homepage": "https://github.com/Block-Chen/blocksdk-php",
+            "keywords": [
+                "BitcoinCash",
+                "Polygon",
+                "bitcoin",
+                "blockchen",
+                "blocksdk",
+                "dash",
+                "ethereum",
+                "litecoin",
+                "sdk"
+            ],
+            "time": "2022-01-25T03:50:25+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

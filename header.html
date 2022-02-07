@@ -1,0 +1,124 @@
+<?php
+
+
+include_once	"./lib/db2.class.php";
+
+$rno = $_SESSION['rno'];
+
+
+$DB_LP2 = new DBCLASS2;
+
+$qry2 = "select * from g5_member where mb_no ='$rno';";
+$DB_LP2->select($qry2);
+$row2 = $DB_LP2->get_data();
+
+
+$mb_id = $row2->mb_id;
+$mb_name = $row2->mb_name;
+$mb_email = $row2->mb_email;
+$mb_cp = $row2->mb_hp;
+$mb_addr = $row2->mb_addr1;
+
+$DB_LP2->close();
+
+?>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!-- hd { -->
+<div id="hd">
+	<div class="hd_wrapper">
+		<div id="logo"><a href="./index.html"><span class="sound_only">아나파톡 WALLET</span></a></div>
+		<div class="btn_nav"><a href="javascript:;"><span class="sound_only">메뉴열기</span></a></div>
+		<div class="btn_mypage"><a href="./mypage.html"><span class="sound_only">마이페이지</span></a></div>
+	</div>
+	<!-- nav { -->
+	<div id="nav">
+		<div class="nav_wrap">
+			<div class="nav_member">
+				<div class="nav_member_info">
+					<dl class="clearfix">
+						<dt>
+							<div class="no_profile"><img src="./images/no_profile.png" alt="no_profile_img"></div>
+						</dt>
+						<dd>
+							안녕하세요~
+						</dd>
+					</dl>
+					<!-- <a href="./mypage.html">개인정보</a> -->
+				</div>
+				<div class="nav_member_btn">
+					<ul class="clearfix">
+						<li><a href="./asset.html">자산</a></li>
+						<!-- <li><a href="./staking.html">스테이킹</a></li> -->
+						<li><a href="./mypage.html">정보</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="menu_btn">
+				<ul>
+					<li><a href="./inquiry.html">서비스 문의</a></li>
+					<li><a href="./faq.html">자주 묻는 질문</a></li>
+					<li><a href="./notice.html">공지사항</a></li>
+					<li><a href="./provision.html">이용약관</a></li>
+				</ul>
+				<div class="alert">
+					<a href="javascript:;" id="alertBtn">시세알림</a>
+					<div class="alert_btn">
+					  <input type="checkbox" value="on" id="alert" class="selec_chk" name="check" checked />
+					  <label for="alert"><span></span></label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- } nav -->
+</div>
+<!-- } hd -->
+
+<script>
+// 헤더 흰색시작
+if(white_head == 1){
+	$('#hd').addClass('white');
+}
+    
+// 헤더 고정
+$( window ).scroll( function() {
+	if ( $( document ).scrollTop() > 0 ) {
+		$( '#hd').addClass( 'on' );
+	}
+	else {		
+		if($('.btn_nav a').find('span').text() == '메뉴열기') {
+			$( '#hd').removeClass( 'on' );
+		}
+	}
+});
+
+// 메뉴 버튼
+$('.btn_nav a').on('click', function(){
+	var hdon = $('#hd').hasClass('on');
+	var txt = $(this).find('span').text();
+	if(txt == '메뉴열기') {
+		$('#nav').slideDown(500);
+		$(this).find('span').text('메뉴닫기');
+		if(!hdon) {
+			$( '#hd').addClass( 'on' );
+		}
+	} else {
+		$('#nav').slideUp(500);
+		$(this).find('span').text('메뉴열기');	
+		if(hdon) {
+			$( '#hd').removeClass( 'on' );
+		}
+	}
+})
+
+// 시세알림 체크
+$('#alertBtn').on('click', function(){
+	if($('#alert').is(":checked")) {
+		$('#alert').prop('checked', false);
+	} else {
+		$('#alert').prop('checked', true);	
+	}
+})
+</script>
